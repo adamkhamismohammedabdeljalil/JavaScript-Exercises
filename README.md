@@ -1,2 +1,3 @@
-# JavaScript-Exercises
-this repository is dedicated for JavaScript exercise.
+# Dom Tree - Exercise 1
+Implementare il codice necessario per recuperare il contenuto del campo di testo `firstName` e stamparlo in console.
+N.B: utilizzare l'id come selettore
