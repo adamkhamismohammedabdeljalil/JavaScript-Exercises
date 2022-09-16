@@ -1,0 +1,49 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's Form</h2>
+      <form id="person-form">
+        <button type="button">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  const firstName=document.createElement("input")
+  const lastName=document.createElement("input")
+  const age=document.createElement("input")
+  
+  const submitBtn=document.querySelector('button')
+  const personForm=document.getElementById('person-form');
+  window.addEventListener('load', initForm)
+  submitBtn.addEventListener('click', submitPersonForm)
+
+  function initForm(){
+    //first name codes
+    firstName.setAttribute('type', 'text')
+    firstName.setAttribute('placeholder', 'First name')
+    firstName.setAttribute('id', 'firtName')
+    submitBtn.insertAdjacentElement('beforeBegin', firstName);
+    //last name codes
+    lastName.setAttribute('type', 'text')
+    lastName.setAttribute('placeholder', 'Last name')
+    lastName.setAttribute('id', 'lastName')
+    submitBtn.insertAdjacentElement('beforeBegin', lastName)
+    //age codes
+    age.setAttribute('type', 'text')
+    age.setAttribute('placeholder', 'Age')
+    age.setAttribute('id', 'age')
+    submitBtn.insertAdjacentElement('beforeBegin', age)
+  }
+ ///function submitPersonForm
+  function submitPersonForm(event){
+    event.preventDefault();
+    const inputEls=document.querySelectorAll('input')
+    let person={};
+   inputEls.forEach((inputEl)=>{
+    person[inputEl.getAttribute('id')]=inputEl.value;
+   })
+   console.log(person)
+  }
+</script>
