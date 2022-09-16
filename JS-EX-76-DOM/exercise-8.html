@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <div >
+      <h2>Hero's List</h2>
+      <ul class="hero-list" style="width: 100px;">
+        <li class="hero-list-item">Batman</li>
+        <li class="hero-list-item" > Superman</li>
+        <li class="hero-list-item">Batman</li>
+        <li class="hero-list-item">Batman</li>
+        
+        
+      </ul>
+    </div>
+    <script>
+      // code here
+   
+      const liEl=document.querySelectorAll('.hero-list-item');
+     
+      for(let i=0;i<liEl.length;i++){
+        liEl[i].addEventListener('mouseenter', mouseEnter);
+        liEl[i].addEventListener('mouseleave', mouseLeave);
+      }
+
+      function mouseEnter(){
+          this.style.background='red';
+      }
+
+      function mouseLeave(){
+          this.style.background='transparent';
+      }
+
+    </script>
+  </body>
+</html>
+
+
